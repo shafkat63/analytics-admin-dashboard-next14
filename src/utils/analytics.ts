@@ -8,12 +8,6 @@ type TrackOptions = {
 	persists?: boolean;
 };
 export class Analytics {
-	static track(
-		arg0: string,
-		arg1: { page: string; country: string | undefined }
-	) {
-		throw new Error("Method not implemented.");
-	}
 	private retention: number = 60 * 60 * 24 * 7;
 	constructor(opts?: AnalyticsArgs) {
 		if (opts?.retention) this.retention = opts.retention;
